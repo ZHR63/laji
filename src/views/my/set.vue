@@ -7,6 +7,11 @@
     <van-cell title="昵称" is-link value="王小二" />
     <van-cell title="手机号" is-link value="18965652323" />
     <van-cell title="我的地址" is-link  />
+    
+    <div class="set-button">
+      <van-button  size="large" >退出</van-button>
+    </div>
+    
   </div>
 </template>
 
@@ -17,6 +22,9 @@
 
   .van-cell,.van-icon {
     line-height: 1.2rem;
+  }
+  .set-button{
+    padding: 24px 15px;
   }
 }
 </style>

@@ -40,11 +40,15 @@ export default {
 .service {
   width: 100vw;
   min-height: 100vh;
+  background: #fff;
 
   .van-cell {
     margin-top: 0.5rem;
+    padding: 0;
   }
-
+.van-cell:not(:last-child)::after{
+  border-bottom:0;
+}
   .service-content {
     padding: 0.4rem;
     margin-bottom: 1rem;

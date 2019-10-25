@@ -56,4 +56,14 @@ export default [{
             index: 2
         }
     },
+
+    // 安全
+    {
+        path: '/password',
+        name: 'password',
+        component: () => import('@/views/my/Password.vue'),
+        meta: {
+            index: 2
+        }
+    },
 ]
