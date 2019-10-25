@@ -42,11 +42,6 @@ export default {
   width: 100vw;
   min-height: 100vh;
   background: #f9f9f9;
-  .clearfix { *zoom: 1;}
-  .clearfix:before,
-  .clearfix:after { display: table; line-height: 0; content: "";}
-  .clearfix:after {clear: both;}
-  .clear{clear: both;}
   .icon {
     width: 1em;
     height: 1em;

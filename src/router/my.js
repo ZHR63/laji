@@ -26,4 +26,44 @@ export default [{
             index: 2
         }
     },
+
+    // 我的钱包
+    {
+        path: '/wallet',
+        name: 'wallet',
+        component: () => import('@/views/my/Wallet.vue'),
+        meta: {
+            index: 2
+        }
+    },
+    
+    // 我的意见
+    {
+        path: '/propose',
+        name: 'propose',
+        component: () => import('@/views/my/Propose.vue'),
+        meta: {
+            index: 2
+        }
+    },
+
+    // 关于
+    {
+        path: '/about',
+        name: 'about',
+        component: () => import('@/views/my/About.vue'),
+        meta: {
+            index: 2
+        }
+    },
+
+    // 安全
+    {
+        path: '/password',
+        name: 'password',
+        component: () => import('@/views/my/Password.vue'),
+        meta: {
+            index: 2
+        }
+    },
 ]

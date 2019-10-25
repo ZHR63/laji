@@ -1,20 +1,18 @@
 <template>
-  <div class="login">
-    <van-nav-bar right-text="注册" @click="$router.go(-1)" left-arrow @click-right="$router.push('/register')" />
+  <div class="register">
+    <van-icon name="arrow-left" />
 
     <div class="main">
-      <h2>Hi 欢迎登录垃圾分类</h2>
-      <div class="login-input">
+      <h3>注册账号</h3>
+      <div class="register-input">
         <van-field v-model="userPhone" clearable placeholder="请输入用手机号" />
         <van-field v-model="verify" clearable placeholder="请输入验证码">
-          <span v-if="!isVerify" slot="button" class="login-input-verify">获取验证码</span>
+          <span v-if="!isVerify" slot="button" class="register-input-verify">获取验证码</span>
           <span v-else slot="button">获取验证码</span>
         </van-field>
+        <van-field v-model="userPhone" clearable placeholder="请输入密码" />
       </div>
-      <div class="login-forget">
-        <a @click="$router.push('/forget')">忘记密码？</a> 
-      </div>
-      <van-button :disabled="isDisabled" size="large"  @click="onClickLogin">登录</van-button>
+      <van-button :disabled="isDisabled" size="large" >注册</van-button>
     </div>
   </div>
 </template>
@@ -62,34 +60,29 @@ export default {
 
 <style lang="scss">
 @import "@/assets/scss/global";
-.login {
+.register {
   position: relative;
   width: 100vw;
   height: 100vh;
   font-size: 0.4rem;
   background: #fff;
-.van-nav-bar{
-  background: none;
-  .van-nav-bar__text{
-    color: #333
-  }
-}
-  
-.van-hairline--bottom::after{
-  border-bottom-width:0;
-}
 
   //返回图标
   .van-icon {
-    color: #333;
+    position: absolute;
+    top: 6vw;
+    left: 5vw;
   }
 
   .main {
     padding: 15vw 10vw;
-
-h2{
-  margin-top: 24px;
-  margin-bottom: 64px;
+.register-img{
+  width: 14vw;
+  margin-bottom: 8px;
+}
+h3{
+  text-align: center;
+  margin-bottom: 40px;
 }
     .van-cell {
       padding: 2vw 0vw;
@@ -100,25 +93,17 @@ h2{
   border-color: #ccc;
   left: 0;
 }
-    .login-input {
+    .register-input {
       margin: {
         top: 5vw;
         bottom: 10vw;
       }
     }
 
-    .login-input-verify {
+    .register-input-verify {
       color: #999;
     }
-    .login-forget{
-        text-align: right;
-        margin-bottom: 0.5rem;
-        a{
-        color: #158cde;
-        font-size: 14px;
-        }
-        
-    }
+
     .van-button {
       border-radius: 5vw;
       height: 1rem;
