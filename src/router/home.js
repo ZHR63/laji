@@ -16,7 +16,7 @@ export default [
         name: 'select-location',
         component: () => import('@/views/home/SelectLocation.vue'),
         meta: {
-            index: 2
+            index: 4
         }
     },
 
@@ -26,7 +26,7 @@ export default [
         name: 'add-location',
         component: () => import('@/views/home/AddLocation.vue'),
         meta: {
-            index: 3
+            index: 5
         }
     },
 
@@ -76,7 +76,7 @@ export default [
         name: 'reserve-clear',
         component: () => import('@/views/home/ReserveClear.vue'),
         meta: {
-            index: 2
+            index: 3
         }
     },
 
@@ -96,7 +96,7 @@ export default [
         name: 'serve-family',
         component: () => import('@/views/home/ServeFamily.vue'),
         meta: {
-            index: 3
+            index: 2
         }
     },
 

@@ -16,12 +16,12 @@
         </div>
       </div>
       <div class="my-wallet clearfix">
-        <div @click="$router.push('/valued')">
+        <div>
           <span>5.00元</span>
           <p>钱包</p>
         </div>
         <b>|</b>
-        <div @click="$router.push('/my-set')">
+        <div>
           <span>1张</span>
           <p>优惠券</p>
         </div>

@@ -4,6 +4,5 @@ export default [{
     component: () => import('@/views/login/login'),
     meta: {
         index: 0
-    }
-
+    },
 }]

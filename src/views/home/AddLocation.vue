@@ -1,6 +1,6 @@
 <template>
   <div class="add-location">
-    <van-nav-bar title="添加地址" left-arrow @click-left="$router.go(-1)" />
+    <van-nav-bar  title="添加地址" left-arrow @click-left="$router.go(-1)" />
 
     <section>
       <van-field label="联系人" v-model="userName" placeholder="联系人" />

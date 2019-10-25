@@ -60,7 +60,7 @@ img {
 .slide-left-enter-active,
 .slide-left-leave-active {
   will-change: transform;
-  transition: all 0.35s;
+  transition: all .5s;
   position: absolute;
 }
 .slide-right-enter {

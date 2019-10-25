@@ -10,9 +10,8 @@ import service from './service' //客服
 Vue.use(Router)
 
 const RouterModel = new Router({
+
     routes: [...login, ...home, ...my, ...order, ...service,
-
-
         // 预约
         {
             path: '/subscribe',
@@ -22,11 +21,21 @@ const RouterModel = new Router({
                 index: 1
             }
         },
-        
-       
-       
-        
+
     ]
 })
+
+// RouterModel.beforeEach((to, from, next) => {
+
+//     if (to.name !== 'login') {
+//         next({
+//             name: 'login'
+//         })
+//     }
+
+//     next();
+// })
+
+
 
 export default RouterModel;
