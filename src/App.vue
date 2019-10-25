@@ -35,6 +35,9 @@ export default {
 </script>
 
 <style lang="scss">
+body{
+  background: #f3f4f7;
+}
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -79,4 +82,19 @@ img {
   opacity: 0;
   transform: translate3d(-100%, 0, 0);
 }
+.clearfix {
+    *zoom: 1;
+  }
+  .clearfix:before,
+  .clearfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+  }
+  .clearfix:after {
+    clear: both;
+  }
+  .clear {
+    clear: both;
+  }
 </style>
