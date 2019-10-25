@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="my-wallet clearfix">
-        <div>
+        <div @click="$router.push('/valued')">
           <span>5.00元</span>
           <p>钱包</p>
         </div>
