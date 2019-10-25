@@ -16,6 +16,7 @@
 </template>
 
 <style lang="scss">
+@import "@/assets/scss/global";
 .my-set-index {
   width: 100vw;
   height: 100vh;
