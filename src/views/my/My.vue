@@ -21,7 +21,7 @@
           <p>钱包</p>
         </div>
         <b>|</b>
-        <div>
+        <div @click="$router.push('/my-set')">
           <span>1张</span>
           <p>优惠券</p>
         </div>
