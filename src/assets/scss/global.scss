@@ -1,0 +1,18 @@
+$theme-color: #4ccbd4;
+
+.van-nav-bar {
+    background: $theme-color;
+    color: #fff;
+}
+
+.van-nav-bar .van-icon,
+.van-nav-bar__text,
+.van-nav-bar__title {
+    color: #fff;
+}
+
+.van-button {
+    background: $theme-color;
+    border: none;
+    color: #fff;
+}
