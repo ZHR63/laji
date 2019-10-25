@@ -16,12 +16,12 @@
         </div>
       </div>
       <div class="my-wallet clearfix">
-        <div @click="$router.push('/valued')">
+        <div @click="$router.push('/wallet')">
           <span>5.00元</span>
           <p>钱包</p>
         </div>
         <b>|</b>
-        <div @click="$router.push('/my-set')">
+        <div>
           <span>1张</span>
           <p>优惠券</p>
         </div>
@@ -38,7 +38,7 @@
       <div class="my-serves my-serves1 clearfix" @click="$router.push('/valued')">
         <div class="my-text">
           <van-cell title="我的估价" icon="comm iconfont icon-31aichegujia" />
-          <p>苹果手机1部2019年2月1日提交</p>
+          <p>苹果手机1部2019年2月1日提交</p> 
         </div>
         <van-tag round type="warning">估价中</van-tag>
       </div>
@@ -53,10 +53,10 @@
     <div class="my-tools">
       <van-cell-group>
         <van-cell title="招商合作" is-link icon="comm iconfont icon-RectangleCopy" />
-        <van-cell title="设置" is-link icon="comm iconfont icon-shezhi1" />
-        <van-cell title="安全与隐私" is-link icon="comm iconfont icon-icon-test" />
-        <van-cell title="意见反馈" is-link icon="comm iconfont icon-Opinion" />
-        <van-cell title="关于" is-link icon="comm iconfont icon-guanyu" />
+        <van-cell title="设置" is-link icon="comm iconfont icon-shezhi1" @click="$router.push('/my-set')" />
+        <van-cell title="安全与隐私" is-link icon="comm iconfont icon-icon-test"  @click="$router.push('/password')"/>
+        <van-cell title="意见反馈" is-link icon="comm iconfont icon-Opinion" @click="$router.push('/propose')" />
+        <van-cell title="关于" is-link icon="comm iconfont icon-guanyu" @click="$router.push('/about')" />
       </van-cell-group>
     </div>
 
@@ -85,21 +85,7 @@ export default {
   width: 100vw;
   min-height: 100vh;
   background: #fff;
-  .clearfix {
-    *zoom: 1;
-  }
-  .clearfix:before,
-  .clearfix:after {
-    display: table;
-    line-height: 0;
-    content: "";
-  }
-  .clearfix:after {
-    clear: both;
-  }
-  .clear {
-    clear: both;
-  }
+  
   .icon {
     width: 1em;
     height: 1em;

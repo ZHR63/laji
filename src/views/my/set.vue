@@ -4,9 +4,9 @@
     <van-cell title="头像" is-link>
       <van-image round width="1.2rem" height="1.2rem" src="https://img.yzcdn.cn/vant/cat.jpeg" />
     </van-cell>
-    <van-cell title="头像" is-link>
-      <van-image round width="1.2rem" height="1.2rem" src="https://img.yzcdn.cn/vant/cat.jpeg" />
-    </van-cell>
+    <van-cell title="昵称" is-link value="王小二" />
+    <van-cell title="手机号" is-link value="18965652323" />
+    <van-cell title="我的地址" is-link  />
   </div>
 </template>
 
