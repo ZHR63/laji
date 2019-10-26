@@ -9,11 +9,27 @@
     <van-cell title="我的地址" is-link  />
     
     <div class="set-button">
-      <van-button  size="large" >退出</van-button>
+      <van-button  size="large" @click="onClickExit" >退出</van-button>
     </div>
     
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+
+    }
+  },
+
+  methods: {
+    onClickExit() {
+      this.$router.push('/login')
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 @import "@/assets/scss/global";

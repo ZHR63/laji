@@ -1,6 +1,11 @@
 <template>
   <div class="login">
-    <van-nav-bar right-text="注册" @click="$router.go(-1)" left-arrow @click-right="$router.push('/register')" />
+    <van-nav-bar
+      right-text="注册"
+      left-arrow
+      @click-left="$router.go(-1)"
+      @click-right="$router.push('/register')"
+    />
 
     <div class="main">
       <h2>Hi 欢迎登录垃圾分类</h2>
@@ -12,9 +17,9 @@
         </van-field>
       </div>
       <div class="login-forget">
-        <a @click="$router.push('/forget')">忘记密码？</a> 
+        <a @click="$router.push('/forget')">忘记密码？</a>
       </div>
-      <van-button :disabled="isDisabled" size="large"  @click="onClickLogin">登录</van-button>
+      <van-button :disabled="isDisabled" size="large" @click="onClickLogin">登录</van-button>
     </div>
   </div>
 </template>
@@ -34,9 +39,9 @@ export default {
 
   methods: {
     //   点击登录
-      onClickLogin() {
-          this.$router.push('/')
-      }
+    onClickLogin() {
+      this.$router.push("/");
+    }
   },
 
   watch: {
@@ -60,7 +65,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/scss/global";
 .login {
   position: relative;
@@ -68,16 +73,16 @@ export default {
   height: 100vh;
   font-size: 0.4rem;
   background: #fff;
-.van-nav-bar{
-  background: none;
-  .van-nav-bar__text{
-    color: #333
+  .van-nav-bar {
+    background: none;
+    .van-nav-bar__text {
+      color: #333;
+    }
   }
-}
-  
-.van-hairline--bottom::after{
-  border-bottom-width:0;
-}
+
+  .van-hairline--bottom::after {
+    border-bottom-width: 0;
+  }
 
   //返回图标
   .van-icon {
@@ -87,19 +92,18 @@ export default {
   .main {
     padding: 15vw 10vw;
 
-h2{
-  margin-top: 24px;
-  margin-bottom: 64px;
-}
+    h2 {
+      margin-top: 24px;
+      margin-bottom: 64px;
+    }
     .van-cell {
       padding: 2vw 0vw;
       margin-top: 4vw;
-
     }
-.van-cell:not(:last-child)::after{
-  border-color: #ccc;
-  left: 0;
-}
+    .van-cell:not(:last-child)::after {
+      border-color: #ccc;
+      left: 0;
+    }
     .login-input {
       margin: {
         top: 5vw;
@@ -110,14 +114,13 @@ h2{
     .login-input-verify {
       color: #999;
     }
-    .login-forget{
-        text-align: right;
-        margin-bottom: 0.5rem;
-        a{
+    .login-forget {
+      text-align: right;
+      margin-bottom: 0.5rem;
+      a {
         color: #158cde;
         font-size: 14px;
-        }
-        
+      }
     }
     .van-button {
       border-radius: 5vw;

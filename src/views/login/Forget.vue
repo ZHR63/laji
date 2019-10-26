@@ -1,6 +1,6 @@
 <template>
   <div class="forget">
-    <van-icon name="arrow-left" />
+    <van-icon name="arrow-left" @click="$router.go(-1)" />
 
     <div class="main">
       <h3>忘记密码</h3>

@@ -1,6 +1,6 @@
 <template>
   <div class="register">
-    <van-icon name="arrow-left" />
+    <van-icon name="arrow-left" @click="$router.go(-1)" />
 
     <div class="main">
       <h3>注册账号</h3>
@@ -8,11 +8,11 @@
         <van-field v-model="userPhone" clearable placeholder="请输入用手机号" />
         <van-field v-model="verify" clearable placeholder="请输入验证码">
           <span v-if="!isVerify" slot="button" class="register-input-verify">获取验证码</span>
-          <span v-else slot="button">获取验证码</span>
+          <span v-else slot="button" @click="onClickVerify">获取验证码</span>
         </van-field>
         <van-field v-model="userPhone" clearable placeholder="请输入密码" />
       </div>
-      <van-button :disabled="isDisabled" size="large" >注册</van-button>
+      <van-button :disabled="isDisabled" size="large">注册</van-button>
     </div>
   </div>
 </template>
@@ -23,8 +23,9 @@ import { phoneModel } from "@/utils";
 export default {
   data() {
     return {
-      userPhone: "",
-      verify: "",
+      userPhone: "", // 用户姓名
+      userPassword: "", //用户密码
+      verify: "", //验证码
       isVerify: false, //是否可以点击验证
       isDisabled: true //是否可以登录
     };
@@ -32,9 +33,14 @@ export default {
 
   methods: {
     //   点击登录
-      onClickLogin() {
-          this.$router.push('/')
-      }
+    onClickLogin() {
+      this.$router.push("/");
+    },
+
+    // 点击获取验证码
+    onClickVerify() {
+      
+    }
   },
 
   watch: {
@@ -76,23 +82,22 @@ export default {
 
   .main {
     padding: 15vw 10vw;
-.register-img{
-  width: 14vw;
-  margin-bottom: 8px;
-}
-h3{
-  text-align: center;
-  margin-bottom: 40px;
-}
+    .register-img {
+      width: 14vw;
+      margin-bottom: 8px;
+    }
+    h3 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
     .van-cell {
       padding: 2vw 0vw;
       margin-top: 4vw;
-
     }
-.van-cell:not(:last-child)::after{
-  border-color: #ccc;
-  left: 0;
-}
+    .van-cell:not(:last-child)::after {
+      border-color: #ccc;
+      left: 0;
+    }
     .register-input {
       margin: {
         top: 5vw;

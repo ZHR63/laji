@@ -11,7 +11,7 @@ Vue.use(Router)
 
 const RouterModel = new Router({
 
-    routes: [...login, ...home, ...my, ...order, ...service,
+    routes: [...home, ...my, ...order, ...service, ...login,
         // 预约
         {
             path: '/subscribe',

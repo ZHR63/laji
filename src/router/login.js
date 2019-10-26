@@ -4,7 +4,7 @@ export default [
         name: 'login',
         component: () => import('@/views/login/login'),
         meta: {
-            index: 0
+            index: 1
         }
     },
 
@@ -14,7 +14,7 @@ export default [
         name: 'register',
         component: () => import('@/views/login/Register.vue'),
         meta: {
-            index: 1
+            index: 2
         }
     },
 
@@ -24,7 +24,7 @@ export default [
         name: 'forget',
         component: () => import('@/views/login/Forget.vue'),
         meta: {
-            index: 1
+            index: 2
         }
     },
 ]
